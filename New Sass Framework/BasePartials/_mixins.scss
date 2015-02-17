@@ -20,23 +20,21 @@
 
 	//LINEAR GRADIENT //
 	@mixin linear-gradient($color-1, $color-2, $direction:vertical) {
-		@if $direction == vertical {
+			$gradient-start: top;
+			$gradient-end: bottom; 
+
+			@if $direction == horizontal {
+				$gradient-start: left;
+				$gradient-end: right;
+			}
+			
 			background: $color-1;
-			background: -moz-linear-gradient(top,  $color-1 0%, $color-2 100%);
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-1), color-stop(100%,$color-2));
-			background: -webkit-linear-gradient(top,  $color-1 0%,$color-2 100%);
-			background: -o-linear-gradient(top,  $color-1 0%,$color-2 100%);
-			background: -ms-linear-gradient(top,  $color-1 0%,$color-2 100%);
-			background: linear-gradient(to bottom,  $color-1 0%,$color-2 100%);
-		} @elseif $direction == horizontal {
-			background: $color-1;
-			background: -moz-linear-gradient(left,  $color-1 0%, $color-2 100%);
-			background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-1), color-stop(100%,$color-2));
-			background: -webkit-linear-gradient(left,  $color-1 0%,$color-2 100%);
-			background: -o-linear-gradient(left,  $color-1 0%,$color-2 100%);
-			background: -ms-linear-gradient(left,  $color-1 0%,$color-2 100%);
-			background: linear-gradient(to right,  $color-1 0%,$color-2 100%);
-		}
+			background: -moz-linear-gradient($gradient-start,  $color-1 0%, $color-2 100%);
+			background: -webkit-gradient(linear, $gradient-start, $gradient-end, color-stop(0%,$color-1), color-stop(100%,$color-2));
+			background: -webkit-linear-gradient($gradient-start,  $color-1 0%,$color-2 100%);
+			background: -o-linear-gradient($gradient-end,  $color-1 0%,$color-2 100%);
+			background: -ms-linear-gradient($gradient-start,  $color-1 0%,$color-2 100%);
+			background: linear-gradient(to $gradient-end,  $color-1 0%,$color-2 100%);
 	}
 
 	//BREAKPOINTS 
