@@ -12,21 +12,29 @@
 	}
 
 	//BOX SHADOW
-	@mixin box-shadow($x, $y, $size, $color) {
+	@mixin box-shadow($x:0px, $y:0px, $size:10px, $color:rgba(0,0,0,.5)) {
 		-webkit-box-shadow: $x $y $size $color;
 		   -moz-box-shadow: $x $y $size $color;
 			    box-shadow: $x $y $size $color;
 	}
 
 	//LINEAR GRADIENT //
-	@mixin linear-gradient($top, $bottom) {
-		background: $top;
-		background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
-		background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
-		background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
-		background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
-		background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+	@mixin linear-gradient($color-1, $color-2, $direction:vertical) {
+			$gradient-start: top;
+			$gradient-end: bottom; 
+
+			@if $direction == horizontal {
+				$gradient-start: left;
+				$gradient-end: right;
+			}
+			
+			background: $color-1;
+			background: -moz-linear-gradient($gradient-start,  $color-1 0%, $color-2 100%);
+			background: -webkit-gradient(linear, $gradient-start, $gradient-end, color-stop(0%,$color-1), color-stop(100%,$color-2));
+			background: -webkit-linear-gradient($gradient-start,  $color-1 0%,$color-2 100%);
+			background: -o-linear-gradient($gradient-end,  $color-1 0%,$color-2 100%);
+			background: -ms-linear-gradient($gradient-start,  $color-1 0%,$color-2 100%);
+			background: linear-gradient(to $gradient-end,  $color-1 0%,$color-2 100%);
 	}
 
 	//BREAKPOINTS 
