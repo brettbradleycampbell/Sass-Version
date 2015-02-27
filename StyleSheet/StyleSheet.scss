@@ -247,7 +247,7 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 	$logo-mobile-scale: .66;
 	$logo-mobile-width: ($logo-image-width * $logo-mobile-scale);
 	$logo-mobile-height: ($logo-image-height * $logo-mobile-scale);
-	$logo-max-width: $container-max-width + ($default-container-padding * 2.5); //2.5? There's almost always some padding around the logo in the image file.  Good idea or not?
+	$logo-max-width: none; //2.5? There's almost always some padding around the logo in the image file.  Good idea or not?
 	@if $full-width-header == T {
 		$logo-max-width: none; //Not sure if this is best, but it needs to align with the Content Box, or at least be wider
 	}
@@ -262,7 +262,7 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 	// HEADER
 	/////////////////////////////
 	$header-font-size: $default-font-size;
-	$header-max-width: $container-max-width + ($default-container-padding * 2);
+	$header-max-width: none;
 	@if $full-width-header == T {
 		$header-max-width: none; //Not sure if this is best, but it needs to align with the Content Box, or at least be wider
 	}
