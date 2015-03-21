@@ -11,15 +11,17 @@
 // BASIC CONDITIONALS
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $layout-style: "Minimal"; // "Minimal" , "Photo" , "Color" 
-$background-image: url(bg.jpg);
+$background-image: url(https://unsplash.imgix.net/photo-1423683249427-8ca22bd873e0?q=75&fm=jpg&s=5e57c661d0f772ce269188a6f5325708);
 $interchangeable-logo: "False"; // "True", "False"
-$logo-image: url(logo.png);
-$logo-image-width: 450px;
-$logo-image-height: 90px;
-$primary-color: #c32432;// 4b86ee c32432 6fb9c4 59c974 53555f
+$logo-image: url(https://1.qualtrics.com/ControlPanel/Graphic.php?IM=IM_2bhfHDfPSY1pbut);
+$logo-image-width: 285px;
+$logo-image-height: 71px;
+$logo-image-position: "Left"; // "Left", "Center", "Right"
+$primary-color: #e74c3c;  
 $header-position: "Contained"; // "Full-width Header" , "Contained"
-$survey-overlay-filter: "Dark Filter"; // "Dark Filter" , "Light Filter"
+$survey-overlay-filter: "Light Filter"; // "Dark Filter" , "Light Filter"
 $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
+$progress-bar-style: "Minimal"; // "Minimal" , "Thick" , "Rounded"
 
 
 //LAYOUT
@@ -94,7 +96,7 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 	// SURVEY ENGINE BODY
 	/////////////////////////////
 	--> $body-background-color: #FFF !default;
-	--> $body-background-image: url(bg.jpg) !default;
+	--> $body-background-image: $background-image;
 	$body-background-size: cover; 	// Change to "auto" and "repeat" for repeating background images
 	$body-background-repeat: no-repeat; 
 	$body-background-position: center fixed;
@@ -220,8 +222,10 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 		$progress-bar-fill-color: set-progress-bar-fill-color($primary-color);
 	}
 
-	$progress-bar-font-size: 14px;
+	$progress-bar-font-size: 16px;
+	
 	$progress-bar-fill-height: $progress-bar-font-size + 2px;
+
 
 	/////////////////////////////
 	// LOGO CONTAINER 
@@ -252,7 +256,15 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 	// @if $boxed-skincontent == F and $full-width-header == T {
 	// 	$logo-max-width: $container-max-width + ($default-container-padding); //Better to have it too far out than too far in.  In my opinion.
 	// }
-	$logo-position: $default-container-padding center; // So it doesn't touch the edge
+	$logo-position: left center;
+	@if $logo-image-position == "Center" {
+		$logo-position: center center;
+	} @else if $logo-image-position == "Right" {
+		$logo-position: right center;
+	} @else {
+		$logo-position: left center;
+	}
+
 	$logo-mobile-position: center center;
 	$logo-mobile-padding: ($logo-padding * $logo-mobile-scale);
 
@@ -534,14 +546,12 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 // IMPORT latest BaseStyles.css
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	@import "BaseStylesV4";
-
+	@import "BaseStylesV4",
+			"new-WYSIWYG-styles";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Add Custom CSS
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 

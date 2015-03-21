@@ -11,15 +11,18 @@
 // BASIC CONDITIONALS
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $layout-style: "Minimal"; // "Minimal" , "Photo" , "Color" 
-$background-image: url(bg.jpg);
+$background-image: url(https://unsplash.imgix.net/photo-1423683249427-8ca22bd873e0?q=75&fm=jpg&s=5e57c661d0f772ce269188a6f5325708);
 $interchangeable-logo: "False"; // "True", "False"
-$logo-image: url(logo.png);
-$logo-image-width: 250px;
-$logo-image-height: 97px;
-$primary-color: #c32432;// 4b86ee c32432 6fb9c4 59c974 53555f
+$logo-image: url(https://1.qualtrics.com/ControlPanel/Graphic.php?IM=IM_2bhfHDfPSY1pbut);
+$logo-image-width: 285px;
+$logo-image-height: 71px;
+$logo-image-position: "Left"; // "Left", "Center", "Right"
+$primary-color: #e74c3c;  
 $header-position: "Contained"; // "Full-width Header" , "Contained"
-$survey-overlay-filter: "Dark Filter"; // "Dark Filter" , "Light Filter"
+$survey-overlay-filter: "Light Filter"; // "Dark Filter" , "Light Filter"
 $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
+$progress-bar-style: "Minimal"; // "Minimal" , "Thick" , "Rounded"
+
 
 // Primary Imports
 
@@ -27,7 +30,6 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 		"BasePartials/wysiwygConditionals",
 		"BasePartials/functions",
 		"BasePartials/mixins";
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Themes
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,8 +50,9 @@ $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 // BASE STYLES
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @import "BasePartials/BaseStylesV4",
-		"UpdateModules/progressBar/progressBar3",
-		"UpdateModules/labelStyles/radioButtons/radioButtons2";
+		//"UpdateModules/progressBar/progressBar3",
+		"UpdateModules/labelStyles/radioButtons/radioButtons2",
+		"UpdateModules/new-WYSIWYG-styles";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Custom SCSS/CSS
