@@ -22,7 +22,7 @@ $header-position: "Contained"; // "Full-width Header" , "Contained"
 $survey-overlay-filter: "Light Filter"; // "Dark Filter" , "Light Filter"
 $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
 $progress-bar-style: "Minimal"; // "Minimal" , "Thick" , "Rounded"
-
+$framework-version: "2015"; // This variable is necessary to allow old variables to work on the newest framework.
 
 // Primary Imports
 
@@ -50,7 +50,7 @@ $progress-bar-style: "Minimal"; // "Minimal" , "Thick" , "Rounded"
 // BASE STYLES
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @import "BasePartials/BaseStylesV4",
-		//"UpdateModules/progressBar/progressBar3",
+		"UpdateModules/progressBar/progressBar3",
 		"UpdateModules/labelStyles/radioButtons/radioButtons2",
 		"UpdateModules/new-WYSIWYG-styles";
 
