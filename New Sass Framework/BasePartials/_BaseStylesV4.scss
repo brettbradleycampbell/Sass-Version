@@ -2915,6 +2915,7 @@ a {
 	} 
 	#LogoContainer {
 		background: $logo-container-background;
+		padding: 0 $default-container-padding;
 
 		@if $full-width-header == T {
 			@if $question-container-box-shadow-on == T  {

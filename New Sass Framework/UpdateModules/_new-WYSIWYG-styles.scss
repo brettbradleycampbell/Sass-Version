@@ -61,15 +61,15 @@
 		
 			tr {
 				td:first-child {
-					color: set-reverse-text-color($body-background-color);
+					color: $reverse-primary-text-color;
 
-					@if $layout-style == "Photo" {
-						color: $reverse-primary-text-color;
+					@if $layout-style == "Color" {
+						color: set-reverse-text-color($body-background-color);
 					}
 					position: absolute;
 					left: 0;
 					line-height: 18px;
-					border-left: 2px solid #a4c690;
+					border-left: none;
 					width: 100%;
 
 					@if $progress-bar-style == "Minimal" {
@@ -83,6 +83,10 @@
 						position: relative;
 						padding-right: 4px;
 						border: none;
+
+						@if $progress-bar-style == "Rounded" {
+							color: set-reverse-text-color($body-background-color);
+						}
 					}
 
 
@@ -93,7 +97,8 @@
 							position: absolute;
 							right: 0;
 							line-height: 18px;
-							color: #a4c690;
+							color: set-reverse-text-color($progress-bar-background-color);
+
 
 							@if $progress-bar-style == "Minimal" {
 								display: none;
@@ -116,7 +121,7 @@
 			width: 100%;
 			border-collapse: collapse;
 			border-right: 4px solid #e8e8eb;
-			border-left: 2px solid #a4c690;
+			border-left: 2px solid $progress-bar-fill-color;
 
 			@if $progress-bar-style == "Rounded" {
 				border: none;
