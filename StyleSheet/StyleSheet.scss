@@ -1,7 +1,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //IMPORT FONT
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	@import url(https://fonts.googleapis.com/css?family=Roboto:700,300italic,700italic,300);
+	// Removing Google Fonts for now because it adds 200ms - 600ms to load.  
+	// Will look into hosting certain Google Fonts on our server so we could reference them. 
+	// @import url(https://fonts.googleapis.com/css?family=Roboto:700,300italic,700italic,300);
 	
 	// * {
 	// 	-webkit-font-smoothing: antialiased;
@@ -143,7 +145,7 @@ $framework-version: "2015"; // This variable is necessary to allow old variables
 	--> $default-container-padding: 20px;
 	$default-mobile-container-padding: 15px;
 	//FONT
-	--> $font-stack: "Roboto", "Helvetica Neue", Arial, sans-serif;
+	--> $font-stack: "Helvetica Neue", Arial, sans-serif;
 	$default-font-size: 16px;
 	$default-text-color: #43464D;
 	@if $boxed-skincontent == F and $body-background-image-on == T {
@@ -249,7 +251,7 @@ $framework-version: "2015"; // This variable is necessary to allow old variables
 	$logo-mobile-scale: .66;
 	$logo-mobile-width: ($logo-image-width * $logo-mobile-scale);
 	$logo-mobile-height: ($logo-image-height * $logo-mobile-scale);
-	$logo-max-width: $container-max-width + ($default-container-padding * 2.5); //2.5? There's almost always some padding around the logo in the image file.  Good idea or not?
+	$logo-max-width: none; //2.5? There's almost always some padding around the logo in the image file.  Good idea or not?
 	@if $full-width-header == T {
 		$logo-max-width: none; //Not sure if this is best, but it needs to align with the Content Box, or at least be wider
 	}
@@ -273,7 +275,7 @@ $framework-version: "2015"; // This variable is necessary to allow old variables
 	// HEADER
 	/////////////////////////////
 	$header-font-size: $default-font-size;
-	$header-max-width: $container-max-width + ($default-container-padding * 2);
+	$header-max-width: none;
 	@if $full-width-header == T {
 		$header-max-width: none; //Not sure if this is best, but it needs to align with the Content Box, or at least be wider
 	}
@@ -558,3 +560,7 @@ $framework-version: "2015"; // This variable is necessary to allow old variables
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7a1a61452dd5c7f8d5a1701aecb1969988036cba
