@@ -1,6 +1,6 @@
 /* 
- * BaseStyles Version: 4.1.5 
- * Last Updated: 2-26-15
+ * BaseStyles Version: 4.1.6 
+ * Last Updated: 3-31-15
  */
 
 //////////////////////////////
@@ -2826,7 +2826,7 @@ a {
 		position:relative;
 		@if $full-width-header == F { // This is here to add space between top of window and SkinInner... Can't add margin to SkinInner because it pushes the plug off the page.  
 			padding-bottom: ($default-container-padding * 2); 
-			@media only screen and (max-width: 480px) {
+			@media only screen and (max-width: 767px) {
 				// SOLUTION: Add padding-bottom to the #ProgressBar (even if there's no progress bar, the div is still there...) Nice.  Kind of weird place to put padding, but fine. 
 				padding-bottom: 0; 
 			}

@@ -44,7 +44,9 @@
 	  		position: relative;
 
 	  		@if $header-position == "Contained" {
-	  			padding-bottom: 40px;
+	  			@media only screen and (min-width: 768px){
+	  				padding-bottom: 40px;
+	  			}
 	  		}
 
 			@if $progress-bar-style == "Rounded" {
