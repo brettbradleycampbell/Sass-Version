@@ -19,7 +19,7 @@ $logo-image: url(https://1.qualtrics.com/ControlPanel/Graphic.php?IM=IM_2bhfHDfP
 $logo-image-width: 285px;
 $logo-image-height: 71px;
 $logo-image-position: "Left"; // "Left", "Center", "Right"
-$primary-color: #e74c3c;  
+$primary-color: #c32432;  
 $header-position: "Contained"; // "Full-width Header" , "Contained"
 $survey-overlay-filter: "Light Filter"; // "Dark Filter" , "Light Filter"
 $label-style-options: "Flat"; // "Flat" , "3D" , "Radio Buttons"
@@ -269,6 +269,15 @@ $framework-version: "2015"; // This variable is necessary to allow old variables
 		}
 	}
 	$logo-mobile-position: center center;
+		@if $framework-version == "2015" {
+		@if $logo-image-position == "Center" {
+			$logo-mobile-position: center center;
+		} @else if $logo-image-position == "Right" {
+			$logo-mobile-position: right center;
+		} @else {
+			$logo-mobile-position: left center;
+		}
+	}
 	$logo-mobile-padding: ($logo-padding * $logo-mobile-scale);
 
 	/////////////////////////////

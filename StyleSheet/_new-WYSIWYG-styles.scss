@@ -18,9 +18,12 @@
 		}
 
 		#LogoContainer {
-			padding: 0 15px;
+			padding: 0 20px;
+			@media only screen and (max-width: $container-max-width){
+				padding: 0 15px;
+			}
 			@if $full-width-header == T {
-				padding: 0 25px;
+				padding: 0px !important;
 			}
 		}
 
@@ -30,12 +33,31 @@
 			} @else if $logo-image-position == "Right" {
 				background-position: right center;
 			}
+			@if $full-width-header == T {
+				margin: 0 20px;
+				@media only screen and (max-width: $container-max-width){
+					margin: 0 15px;
+				}
+			}
 		}
 
 		#Header {
-			padding: 10px;
+			padding: 0px;
+			text-align: left;
 			@if $logo-image-position == "Center" {
 				text-align: center;
+			}
+			@if $logo-image-position == "Left" {
+				text-align: left;
+			}
+			@if $logo-image-position == "Right" {
+				text-align: right;
+			}
+			@if $full-width-header == T {
+				padding: 5px 20px;
+				@media only screen and (max-width: $container-max-width){
+					padding: 5px 15px;
+				}
 			}
 		}
 
